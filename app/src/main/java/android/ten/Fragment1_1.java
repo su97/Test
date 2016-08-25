@@ -135,6 +135,7 @@ public class Fragment1_1 extends Fragment {
         image3 = (ImageView) view.findViewById(R.id.img3);
         image4 = (ImageView) view.findViewById(R.id.img4);
 
+        //
     }
 
 
