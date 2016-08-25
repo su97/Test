@@ -59,6 +59,7 @@ public class Fragment1_1 extends Fragment {
                     info.setText4(json.getString("text4"));
                     info.setText5(json.getString("text5"));
                     info.setTitle(json.getString("title"));
+                    initData();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -93,7 +94,7 @@ public class Fragment1_1 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_fragment1_1, container, false);
-        initData();
+
         initView();
 
 
