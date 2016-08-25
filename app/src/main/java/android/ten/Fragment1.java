@@ -44,7 +44,7 @@ public class Fragment1 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_fragment1, container, false);
         data = new ArrayList<>();
         viewPager = (ViewPager) view.findViewById(R.id.viewpager);
-        initView();
+
         initData();
 
         return view;
@@ -65,6 +65,7 @@ public class Fragment1 extends Fragment {
                         String str = json2.getString("id");
                         list.add(str);
                     }
+                    initView();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -95,8 +96,11 @@ public class Fragment1 extends Fragment {
 
     private void initView() {
 
-        for(int i = 0; i< 10; i++){
+        for(int i = 0; i< list.size(); i++){
+            Bundle bundle = new Bundle();
+            bundle.putString("id",list.get(i));
             fragment11 = new Fragment1_1();
+            fragment11.setArguments(bundle);
             data.add(fragment11);
         }
 
