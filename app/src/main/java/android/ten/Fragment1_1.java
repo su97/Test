@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.xutils.common.Callback;
@@ -111,6 +113,11 @@ public class Fragment1_1 extends Fragment {
         String str2 = info.image2;
         String str3 = info.image3;
         String str4 = info.image4;
+        Picasso.with(getContext()).load("http://api.shigeten.net/"+str1).into(image1);
+        Picasso.with(getContext()).load("http://api.shigeten.net/"+str2).into(image2);
+        Picasso.with(getContext()).load("http://api.shigeten.net/"+str3).into(image3);
+        Picasso.with(getContext()).load("http://api.shigeten.net/"+str4).into(image4);
+
     }
 
     private void initView() {
